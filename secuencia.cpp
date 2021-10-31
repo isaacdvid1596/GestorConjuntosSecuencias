@@ -7,6 +7,10 @@ secuencia::secuencia()
 	isConjunto = false;
 }
 
+secuencia::~secuencia()
+{
+}
+
 void secuencia::print()
 {
 	for (int i = 0; i < 1; i++)
@@ -35,12 +39,12 @@ void secuencia::add(int e)
 	vector_sequencia.push_back(e);
 }
 
-//conjunto* secuencia::convert(secuencia* s)
-//{
-//	conjunto* c = dynamic_cast<conjunto*>(s);
-//
-//	return c;
-//}
+conjunto* secuencia::convert(secuencia* s)
+{
+	conjunto* c = reinterpret_cast<conjunto*>(&s);
+
+	return c;
+}
 
 void secuencia::equals(secuencia s1, secuencia s2)
 {

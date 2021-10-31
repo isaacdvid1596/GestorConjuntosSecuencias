@@ -10,9 +10,11 @@ conjunto::conjunto(){
 	isConjunto = true;
 }
 
+conjunto::~conjunto() {}
+
 //se crea el conjunto
 
-void conjunto::create(int s,int nums [])
+vector<int> conjunto::create(int s,int nums [])
 {
 	this->size = s;
 
@@ -20,12 +22,15 @@ void conjunto::create(int s,int nums [])
 	{
 		vector_conjunto.push_back(nums[i]);
 	}
+
+	return vector_conjunto;
 }
 
 //se imprime el conjunto
 
 void conjunto::print()
 {
+
 	for (int i = 0; i < 1; i++)
 	{
 		cout << "{ ";
@@ -44,12 +49,12 @@ void conjunto::add(int e)
 	vector_conjunto.push_back(e);
 }
 
-//secuencia* conjunto::convert(conjunto* c)
-//{
-//	secuencia* s = dynamic_cast<secuencia*>(c);
-//
-//	return s;
-//}
+secuencia* conjunto::convert(conjunto* c)
+{
+	secuencia* s = reinterpret_cast<secuencia*>(&c);
+
+	return s;
+}
 
 void conjunto::equals(conjunto c1,conjunto c2)
 {

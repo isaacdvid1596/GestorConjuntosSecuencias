@@ -16,6 +16,7 @@ class secuencia: public base
 	public:
 		//constructor
 		secuencia();
+		~secuencia();
 		//variables
 		int size;
 		vector<int> vector_sequencia;

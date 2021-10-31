@@ -21,15 +21,16 @@ class conjunto: public base
 	public:
 		//constructor
 		conjunto();
+		~conjunto();
 		//variables
 		int size;
 		vector<int> vector_conjunto;
 		bool isConjunto;
 		//metodos
 		void print();
-		void create(int,int[]);
+		vector<int> create(int,int[]);
 		void add(int);
-	/*	secuencia* convert(conjunto*);*/
+		secuencia* convert(conjunto*);
 		void equals(conjunto,conjunto);
 		void equals(conjunto,secuencia);
 		void _union(conjunto,conjunto);

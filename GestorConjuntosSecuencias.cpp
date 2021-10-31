@@ -6,6 +6,7 @@
 #include "conjunto.h"
 #include "secuencia.h"
 
+
 using namespace std;
 
 int main()
@@ -64,10 +65,15 @@ int main()
 	s.add(3);
 	s.print();
 
-	//conjunto* cp = &c;
 
-	//secuencia* rs = c.convert(cp);
+	conjunto* cp = &c;
 
+	secuencia* rs = c.convert(cp);
+
+	rs->print();
+
+	
+	//rs->isConjunto = false;
 	//rs->print();
 
 }
